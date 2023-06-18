@@ -5,6 +5,7 @@ const MemberSchema = new Schema(
     id: {
       type: 'String',
       required: true,
+      unique: true,
     },
     community: {
       type: 'String',
