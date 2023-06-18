@@ -4,20 +4,22 @@ const AuthSchema = new Schema(
   {
     id: {
       type: 'String',
+      required: true,
+      unique: true,
     },
     name: {
       type: 'String',
-      required: true,
 
+      default: null,
       minLength: 2,
     },
     email: {
       type: 'String',
-      required: true,
+
+      unique: true,
     },
     password: {
       type: 'String',
-      required: true,
 
       minLength: 6,
     },
